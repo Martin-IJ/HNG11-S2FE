@@ -7,7 +7,7 @@ import youtube from '../assets/youtube.svg'
 
 const Footer = () => {
   return (
-    <div className="bg-secondary-extraLight py-20">
+    <div className="bg-secondary-extraLight py-10 md:py-20 px-2">
       <div className="container mx-auto md:flex flex-wrap justify-between gap-5 space-y-10 md:space-y-0">
         <div className="max-w-[265px] w-full space-y-5">
           <img src={logo} alt="" />

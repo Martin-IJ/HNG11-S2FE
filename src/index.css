@@ -4,8 +4,6 @@
 
 .hero-banner{
 background-image: url(./assets/hero\ image.jpeg);
-background-position: center;
-background-size: cover;
 }
 
 .green-btn{
@@ -14,4 +12,49 @@ background-size: cover;
 
 .view-all-btn{
   @apply border px-8 py-3 mt-10 border-secondary-dark text-secondary-dark uppercase text-[12px] font-semibold
+}
+
+.h1{
+  @apply text-[24px] md:text-[42px]
+}
+
+.h2{
+  @apply text-[24px] md:text-[35px]
+}
+
+.h3{
+  @apply text-[19px] md:text-[29px]
+}
+
+.h4{
+  @apply text-[12px] md:text-[24px]
+}
+
+.h5{
+  @apply text-[24px] md:text-[20px]
+}
+
+.h6{
+  @apply text-[24px] md:text-[17px]
+}
+
+.h7{
+  @apply text-[10px] md:text-[14px]
+}
+
+.h8{
+  @apply text-[24px] md:text-[12px]
+}
+
+.h9{
+  @apply text-[24px] md:text-[10px]
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
 }

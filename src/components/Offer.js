@@ -4,15 +4,15 @@ import image from "../assets/Imaggge.jpeg";
 const Offer = () => {
   return (
     <div className="h-[435px] bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${image})` }}>
-      <div className="container mx-auto flex items-center h-full">
-        <div className="text-black w-[400px]">
-          <h2 className="text-[42px] leading-none">
+      <div className="container mx-auto px-2 pt-10 h-full">
+        <div className="text-black w-[255px] md:w-[400px]">
+          <h2 className="h1 font-semibold leading-none">
             Grab 20% Off Chemical Peeling Today!
           </h2>
-          <p className="text-[24px] mt-3 mb-5">
+          <p className="h4 mt-3 mb-5">
             Offer valid from july 2nd - July 9th
           </p>
-          <button className="green-btn">Book Now</button>
+          <button className="green-btn h7">Book Now</button>
         </div>
       </div>
     </div>

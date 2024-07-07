@@ -8,8 +8,8 @@ import Offer from "./Offer";
 const Home = () => {
   return (
     <div>
-      <div className="hero-banner h-[430px]">
-        <div className="container mx-auto flex items-center h-full">
+      <div className="hero-banner bg-cover md:bg-center bg-no-repeat h-[430px]">
+        <div className="container mx-auto flex items-center h-full px-2">
           <div className="w-[280px]">
             <h2 className="text-[42px] leading-none">
               Your Daily Dose Of Glow
