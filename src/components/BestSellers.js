@@ -90,7 +90,7 @@ const BestSellers = () => {
         </div>
       </div>
 
-      <button className="view-all-btn flex mx-auto">View All</button>
+      <button className="view-all-btn hidden lg:flex mx-auto">View All</button>
     </div>
   );
 };

@@ -20,7 +20,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="my-20 space-y-14">
+      <div className="my-10 lg:my-20 space-y-7 lg:space-y-14">
         <NewArrival />
         <BestSellers />
         <Cleansers />

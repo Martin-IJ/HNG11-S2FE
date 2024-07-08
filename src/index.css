@@ -19,7 +19,7 @@ background-image: url(./assets/hero\ image.jpeg);
 }
 
 .h2{
-  @apply text-[24px] md:text-[35px]
+  @apply text-[29px] md:text-[35px]
 }
 
 .h3{
@@ -31,11 +31,11 @@ background-image: url(./assets/hero\ image.jpeg);
 }
 
 .h5{
-  @apply text-[24px] md:text-[20px]
+  @apply text-[20px] md:text-[20px]
 }
 
 .h6{
-  @apply text-[24px] md:text-[17px]
+  @apply text-[17px] md:text-[17px]
 }
 
 .h7{
@@ -43,11 +43,15 @@ background-image: url(./assets/hero\ image.jpeg);
 }
 
 .h8{
-  @apply text-[24px] md:text-[12px]
+  @apply text-[12px] md:text-[12px]
 }
 
 .h9{
-  @apply text-[24px] md:text-[10px]
+  @apply text-[10px] md:text-[10px]
+}
+
+.h10{
+  @apply text-[8px]
 }
 
 .hide-scrollbar {

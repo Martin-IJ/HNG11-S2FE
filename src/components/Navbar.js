@@ -1,12 +1,34 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import logo from "../assets/Frame 9.svg";
 import { FaRegHeart } from "react-icons/fa";
 import { FaRegUser, FaAngleDown } from "react-icons/fa6";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoSearch } from "react-icons/io5";
 import { MdOutlineShoppingCart } from "react-icons/md";
+import { Link } from "react-router-dom";
+import Cart from "./Cart";
 
 const Navbar = () => {
+  const [cartVisible, setCartVisible] = useState(false);
+  const cartRef = useRef(null);
+
+  const toggleCart = () => {
+    setCartVisible(!cartVisible);
+  };
+
+  const handleClickOutside = (event) => {
+    if (cartRef.current && !cartRef.current.contains(event.target)) {
+      setCartVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <div className="bg-white">
       <div className="border-b border-primary-dark">
@@ -27,30 +49,40 @@ const Navbar = () => {
             <IoSearch />
           </div>
 
-          <div className="flex-1 flex justify-center">
-            <img src={logo} alt="Logo" />
-          </div>
+          <Link to="/">
+            <div className="flex-1 flex justify-center">
+              <img src={logo} alt="Logo" />
+            </div>
+          </Link>
 
+          {/* Mobile navbar (right side) */}
           <div className="flex-1 flex lg:hidden justify-end gap-2 lg:gap-7 text-2xl lg:text-lg">
             <FaRegUser />
-            <div className="flex items-center">
-              <MdOutlineShoppingCart />
-              <div className="h-[15px] w-[15px] flex items-center justify-center text-[8px] bg-secondary-extraLight rounded-full">
-                0
+            <Link to="/cart">
+              <div className="flex items-center">
+                <MdOutlineShoppingCart />
+                <div className="h-[15px] w-[15px] flex items-center justify-center text-[8px] bg-secondary-extraLight rounded-full">
+                  0
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
 
-          {/* Desktop navbar */}
-          <div className="flex-1 hidden lg:flex justify-end gap-2 lg:gap-7 text-2xl lg:text-lg">
+          {/* Desktop navbar (right side) */}
+          <div className="relative flex-1 hidden lg:flex justify-end gap-2 lg:gap-7 text-2xl lg:text-lg">
             <FaRegUser />
             <FaRegHeart />
-            <div className="flex items-center">
+            <button className="flex items-center" onClick={toggleCart}>
               <MdOutlineShoppingCart />
-              <div className="h-[15px] w-[15px] flex items-center justify-center text-[8px] bg-secondary-extraLight rounded-full">
+              <span className="h-[15px] w-[15px] flex items-center justify-center text-[8px] bg-secondary-extraLight rounded-full">
                 0
+              </span>
+            </button>
+            {cartVisible && (
+              <div ref={cartRef} className="absolute top-[5.7rem] right-0 w-[520px] h-[550px] bg-white border border-secondary-extraLight shadow-lg">
+                <Cart onClose={() => setCartVisible(false)} />
               </div>
-            </div>
+            )}
           </div>
         </div>
       </div>
@@ -64,7 +96,9 @@ const Navbar = () => {
           <li>Gift Cards</li>
           <li>Best & New</li>
           <li>Wholesale</li>
-          <li>Categories <FaAngleDown /></li>
+          <li className="flex items-center gap-3 border-b border-secondary-extraLight">
+            Categories <FaAngleDown />
+          </li>
           <li>Sales & Offers</li>
         </ul>
       </div>
