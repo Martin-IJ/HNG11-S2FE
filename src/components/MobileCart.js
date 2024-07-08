@@ -6,29 +6,48 @@ import { Link } from "react-router-dom";
 
 const MobileCart = () => {
   const initialProducts = [
-    { id: 1, name: "Olay Vitamin C Brightening Body Lotion 502ML", price: 33000, count: 1 },
-    { id: 2, name: "Olay Vitamin C Brightening Body Lotion 502ML", price: 33000, count: 1 }
+    {
+      id: 1,
+      name: "Olay Vitamin C Brightening Body Lotion 502ML",
+      price: 33000,
+      count: 1,
+    },
+    {
+      id: 2,
+      name: "Olay Vitamin C Brightening Body Lotion 502ML",
+      price: 33000,
+      count: 1,
+    },
   ];
 
   const [products, setProducts] = useState(initialProducts);
 
   const increaseCount = (id) => {
-    setProducts(products.map(product =>
-      product.id === id ? { ...product, count: product.count + 1 } : product
-    ));
+    setProducts(
+      products.map((product) =>
+        product.id === id ? { ...product, count: product.count + 1 } : product
+      )
+    );
   };
 
   const decreaseCount = (id) => {
-    setProducts(products.map(product =>
-      product.id === id ? { ...product, count: product.count > 1 ? product.count - 1 : 1 } : product
-    ));
+    setProducts(
+      products.map((product) =>
+        product.id === id
+          ? { ...product, count: product.count > 1 ? product.count - 1 : 1 }
+          : product
+      )
+    );
   };
 
   const removeProduct = (id) => {
-    setProducts(products.filter(product => product.id !== id));
+    setProducts(products.filter((product) => product.id !== id));
   };
 
-  const subtotal = products.reduce((total, product) => total + product.price * product.count, 0);
+  const subtotal = products.reduce(
+    (total, product) => total + product.price * product.count,
+    0
+  );
 
   return (
     <div className="p-5 ">
@@ -40,7 +59,7 @@ const MobileCart = () => {
           <FaArrowRightLong />
         </div>
 
-        {products.map(product => (
+        {products.map((product) => (
           <div key={product.id} className="flex gap-10 justify-between py-5">
             <img src={image} alt="" className="h-24" />
             <div className="flex flex-col justify-between">
@@ -49,7 +68,9 @@ const MobileCart = () => {
                 <div className="flex gap-2 px-2 py-1 w-fit text-[9px] border border-black/20">
                   <button
                     onClick={() => decreaseCount(product.id)}
-                    className={`${product.count === 1 ? "text-black/20" : "text-tertiary"}`}
+                    className={`${
+                      product.count === 1 ? "text-black/20" : "text-tertiary"
+                    }`}
                   >
                     -
                   </button>
@@ -78,16 +99,22 @@ const MobileCart = () => {
             <p className="h8">₦{subtotal.toLocaleString()}</p>
           </div>
           <p className="h10">
-            <sup>{products.length}</sup> <span className=" underline">Have a Coupon?</span>
+            <sup>{products.length}</sup>{" "}
+            <span className=" underline">Have a Coupon?</span>
           </p>
         </div>
 
         <div className="flex justify-between">
-          <button className="bg-primary-dark uppercase py-3 px-7 h7">View Cart</button>
-          <Link to='/checkout'>
-          <button className="bg-secondary-extraLight uppercase py-3 px-10 h7 flex items-center gap-2">
-            Checkout <FaArrowRightLong />
-          </button></Link>
+          <Link to="/view-cart">
+            <button className="bg-primary-dark uppercase py-3 px-7 h7">
+              View Cart
+            </button>
+          </Link>
+          <Link to="/checkout">
+            <button className="bg-secondary-extraLight uppercase py-3 px-10 h7 flex items-center gap-2">
+              Checkout <FaArrowRightLong />
+            </button>
+          </Link>
         </div>
       </div>
     </div>

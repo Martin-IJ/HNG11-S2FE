@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import MobileCart from "./components/MobileCart";
 import Checkout from "./components/Checkout";
+import CartPage from "./components/CartPage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/cart" element={<MobileCart />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/view-cart" element={<CartPage />} />
       </Routes>
       <Footer />
     </div>

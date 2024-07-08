@@ -65,9 +65,9 @@ const Cart = ({ onClose }) => {
           <div key={product.id} className="flex gap-10 justify-between py-5">
             <img src={image} alt="" className="h-24" />
             <div className="flex flex-col justify-between">
-              <p className="h9">{product.name}</p>
+              <p className="h9 uppercase">{product.name}</p>
               <div className="flex items-center gap-3">
-                <div className="flex gap-2 px-2 py-1 w-fit text-[9px] border border-black/20">
+                <div className="flex gap-2 px-2 w-fit text-[9px] border border-black/20">
                   <button
                     onClick={() => decreaseCount(product.id)}
                     className={`${
@@ -79,7 +79,7 @@ const Cart = ({ onClose }) => {
                   <p>{product.count}</p>
                   <button onClick={() => increaseCount(product.id)}>+</button>
                 </div>
-                <p className="h9">₦{product.price}</p>
+                <p className="h9">₦{product.price.toLocaleString()}</p>
               </div>
             </div>
             <button
@@ -107,9 +107,14 @@ const Cart = ({ onClose }) => {
         </div>
 
         <div className="flex justify-between">
-          <button className="bg-primary-dark uppercase py-3 px-7 h7">
-            View Cart
-          </button>
+          <Link to="/view-cart">
+            <button
+              onClick={onClose}
+              className="bg-primary-dark uppercase py-3 px-7 h7"
+            >
+              View Cart
+            </button>
+          </Link>
 
           <Link to="/checkout">
             <button
