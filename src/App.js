@@ -8,7 +8,7 @@ import CartPage from "./components/CartPage";
 
 function App() {
   return (
-    <div className="bg-primary-light text-tertiary">
+    <div className="bg-primary-light text-tertiary font-lato">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

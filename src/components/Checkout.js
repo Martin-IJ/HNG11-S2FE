@@ -9,8 +9,8 @@ const Checkout = () => {
         <form className="flex mx-auto lg:mx-0 flex-col gap-5 bg-white max-w-[695px] w-full p-5">
           <p className="h7">BILLING DETAILS</p>
 
-          <div className="flex justify-between gap-5 lg:gap-16">
-            <label htmlFor="firstName" className="w-full">
+          <div className="md:flex justify-between gap-5 lg:gap-16">
+            <label htmlFor="firstName" className="w-full block md:inline-block">
               <p className="h9 pb-2">FIRST NAME</p>
               <input
                 type="text"
@@ -18,7 +18,10 @@ const Checkout = () => {
                 className="w-full p-2 border border-primary-dark"
               />
             </label>
-            <label htmlFor="lastName" className="w-full">
+            <label
+              htmlFor="lastName"
+              className="w-full block md:inline-block mt-5 md:mt-0"
+            >
               <p className="h9 pb-2">LAST NAME</p>
               <input
                 type="text"
@@ -42,18 +45,18 @@ const Checkout = () => {
           </p>
           <p className="h7">NIGERIA</p>
 
-          <label htmlFor="streetAddress" className="w-full">
+          <label htmlFor="streetAddress1" className="w-full">
             <p className="h9 pb-2">
               STREET ADDRESS <sup className="text-red-500">*</sup>
             </p>
             <input
               type="text"
-              id="streetAddress"
+              id="streetAddress1"
               className="w-full p-2 border border-primary-dark mb-3"
             />
             <input
               type="text"
-              id="streetAddress"
+              id="streetAddress2"
               className="w-full p-2 border border-primary-dark"
             />
           </label>
@@ -85,7 +88,7 @@ const Checkout = () => {
               PHONE NUMBER <sup className="text-red-500">*</sup>
             </p>
             <input
-              type="phone"
+              type="text"
               id="phone"
               className="w-full p-2 border border-primary-dark"
             />
@@ -96,14 +99,14 @@ const Checkout = () => {
               EMAIL ADDRESS <sup className="text-red-500">*</sup>
             </p>
             <input
-              type="text"
+              type="email"
               id="email"
               className="w-full p-2 border border-primary-dark"
             />
           </label>
         </form>
 
-        <div className="w-full">
+        <div className="w-full lg:w-1/2 lg:pl-10">
           <div className="mx-auto max-w-[440px] w-full h-fit mt-10 lg:mt-0 bg-white lg:bg-transparent border border-primary-dark rounded-[4px]">
             <p className="h7 font-semibold p-[10px] text-center bg-secondary-extraLight border-b border-primary-dark">
               YOUR ORDER SUMMARY
@@ -124,9 +127,9 @@ const Checkout = () => {
             </div>
           </div>
 
-          <p className="h7 max-w-[295px] w-full p-[10px] mx-auto text-center bg-secondary-extraLight mt-10 lg:mt-20">
+          <button className="max-w-[295px] w-full mx-auto light-green-btn text-center mt-10 lg:mt-20">
             PLACE ORDER
-          </p>
+          </button>
         </div>
       </div>
     </div>

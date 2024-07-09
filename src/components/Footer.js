@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="container mx-auto md:flex flex-wrap justify-between gap-5 space-y-10 md:space-y-0">
         <div className="max-w-[265px] w-full space-y-5">
           <img src={logo} alt="" />
-          <p className="text-[17px]">
+          <p className="text-[17px] font-merriweather">
             Subscribe to our mailing list to get the new updates{" "}
           </p>
           <div className="flex gap-5">
@@ -23,7 +23,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <h2 className="text-[29px] mb-5 font-semibold">INFORMATION</h2>
+          <h2 className="h3 mb-5 font-semibold">INFORMATION</h2>
           <ul className="space-y-5">
             <li>About Us</li>
             <li>Contact</li>
@@ -32,7 +32,7 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <h2 className="text-[29px] mb-5 font-semibold">OUR SERVICES</h2>
+          <h2 className="h3 mb-5 font-semibold">OUR SERVICES</h2>
           <ul className="space-y-5">
             <li>Shipping & Delivery</li>
             <li>Refunds & Returns</li>
@@ -40,7 +40,7 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <h2 className="text-[29px] mb-5 font-semibold">MY ACCOUNT</h2>
+          <h2 className="h3 mb-5 font-semibold">MY ACCOUNT</h2>
           <ul className="space-y-5">
             <li>My Account</li>
             <li>My Cart</li>

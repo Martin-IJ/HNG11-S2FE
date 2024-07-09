@@ -106,11 +106,11 @@ const Cart = ({ onClose }) => {
           </p>
         </div>
 
-        <div className="flex justify-between">
+        <div className="flex justify-evenly">
           <Link to="/view-cart">
             <button
               onClick={onClose}
-              className="bg-primary-dark uppercase py-3 px-7 h7"
+              className="bg-primary-dark uppercase py-2 px-10 h7"
             >
               View Cart
             </button>
@@ -119,7 +119,7 @@ const Cart = ({ onClose }) => {
           <Link to="/checkout">
             <button
               onClick={onClose}
-              className="bg-secondary-extraLight uppercase py-3 px-10 h7 flex items-center gap-2"
+              className="light-green-btn"
             >
               Checkout <FaArrowRightLong />
             </button>

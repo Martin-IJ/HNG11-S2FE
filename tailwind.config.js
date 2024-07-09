@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -15,6 +15,12 @@ module.exports = {
           dark: "#3F7C1D",
         },
         tertiary: "#353535",
+      },
+      fontFamily: {
+        lato: ["Lato", "sans-serif"],
+        sans: ["Open Sans", "sans-serif"],
+        merriweather: ["Merriweather", "serif"],
+        playFair: ["Playfair Display", "serif"],
       },
     },
   },

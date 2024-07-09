@@ -6,7 +6,7 @@ const Offer = () => {
     <div className="h-[435px] bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${image})` }}>
       <div className="container mx-auto px-2 pt-10 h-full">
         <div className="text-black w-[255px] md:w-[400px]">
-          <h2 className="h1 font-semibold leading-none">
+          <h2 className="h1 font-semibold">
             Grab 20% Off Chemical Peeling Today!
           </h2>
           <p className="h4 mt-3 mb-5">

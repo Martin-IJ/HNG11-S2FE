@@ -14,10 +14,10 @@ const Cleansers = () => {
             }`}
             style={{ backgroundImage: `url(${image})` }}
           >
-            <h4 className="absolute top-3 left-3 bg-white px-3 rounded-md border border-tertiary shadow shadow-black/50">
+            <h4 className="absolute font-playFair h5 top-3 left-3 bg-white px-5 rounded-md border border-tertiary shadow shadow-black/50">
               {name}
             </h4>
-            <p className="absolute bottom-3 right-3 bg-white px-3 rounded-md border border-tertiary shadow shadow-black/50">
+            <p className="absolute h9 uppercase bottom-3 right-3 bg-white px-3 py-2 rounded-md border border-tertiary shadow shadow-black/50">
               {description}
             </p>
           </div>

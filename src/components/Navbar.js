@@ -40,13 +40,19 @@ const Navbar = () => {
                 className="w-full bg-transparent outline-none text-sm"
                 placeholder="Find your product"
               />
-              <IoSearch />
+              <button>
+                <IoSearch />
+              </button>
             </div>
           </div>
 
           <div className="flex-1 flex lg:hidden gap-2 text-2xl items-center">
-            <GiHamburgerMenu />
-            <IoSearch />
+            <button>
+              <GiHamburgerMenu />
+            </button>
+            <button>
+              <IoSearch />
+            </button>
           </div>
 
           <Link to="/">
@@ -57,7 +63,9 @@ const Navbar = () => {
 
           {/* Mobile navbar (right side) */}
           <div className="flex-1 flex lg:hidden justify-end gap-2 lg:gap-7 text-2xl lg:text-lg">
-            <FaRegUser />
+            <button>
+              <FaRegUser />
+            </button>
             <Link to="/cart">
               <div className="flex items-center">
                 <MdOutlineShoppingCart />
@@ -70,8 +78,12 @@ const Navbar = () => {
 
           {/* Desktop navbar (right side) */}
           <div className="relative flex-1 hidden lg:flex justify-end gap-2 lg:gap-7 text-2xl lg:text-lg">
-            <FaRegUser />
-            <FaRegHeart />
+            <button>
+              <FaRegUser />
+            </button>
+            <button>
+              <FaRegHeart />
+            </button>
             <button className="flex items-center" onClick={toggleCart}>
               <MdOutlineShoppingCart />
               <span className="h-[15px] w-[15px] flex items-center justify-center text-[8px] bg-secondary-extraLight rounded-full">
@@ -79,7 +91,10 @@ const Navbar = () => {
               </span>
             </button>
             {cartVisible && (
-              <div ref={cartRef} className="absolute top-[5.7rem] right-0 w-[520px] h-[550px] bg-white border border-secondary-extraLight shadow-lg">
+              <div
+                ref={cartRef}
+                className="absolute top-[5.7rem] right-0 w-[520px] h-[550px] bg-white border border-secondary-extraLight shadow-lg"
+              >
                 <Cart onClose={() => setCartVisible(false)} />
               </div>
             )}

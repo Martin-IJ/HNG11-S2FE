@@ -39,16 +39,16 @@ const OnSale = () => {
   };
 
   return (
-    <div className="container mx-auto px-2">
+    <div className="container mx-auto px-2 w-screen">
       <h3 className="h3 text-[29px] mb-5">On Sales</h3>
-      <div className="overflow-x-auto hide-scrollbar">
-        <div className="flex gap-5">
+      <div className="overflow-x-auto hide-scrollbar w-full">
+        <div className="flex gap-3 md:gap-5 w-full">
           {NewProduct.map((product) => {
             const { id, image, name, price } = product;
             return (
               <div
                 key={id}
-                className="group relative w-[193px] md:w-[210px] flex-shrink-0 lg:flex-shrink p-3 bg-white border-2 border-secondary-extraLight hover:border-secondary-light"
+                className="group relative w-[48%] md:w-[210px] flex-shrink-0 lg:flex-shrink p-3 bg-white border-2 border-secondary-extraLight hover:border-secondary-light"
               >
                 <div
                   className="absolute top-5 right-5"
